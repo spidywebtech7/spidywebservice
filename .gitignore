@@ -2,3 +2,5 @@ node_modules/
 server/*.db
 .env
 .vercel
+
+.vercel
