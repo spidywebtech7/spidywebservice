@@ -6,7 +6,7 @@
     <title>Services | Spidyweb Service - Cutting Edge IT Solutions</title>
     <meta name="description" content="Explore Spidyweb Service's wide range of IT solutions, from AI/ML Consulting to Web and Mobile Development.">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
@@ -36,22 +36,37 @@
             </div>
             <nav id="nav-menu">
                 <ul>
-                    <li class="has-dropdown"><a href="services.html" class="active">Services <i class="fas fa-chevron-down"></i></a>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="has-dropdown">
+                        <a href="services.html" class="active">Services <i class="fas fa-chevron-down"></i></a>
                         <ul class="dropdown">
-                            <li><a href="services.html?tab=web">Web Development</a></li>
-                            <li><a href="services.html?tab=mobile">Mobile App Development</a></li>
-                            <li><a href="services.html?tab=ai">AI/ML Solutions</a></li>
-                            <li><a href="services.html?tab=cloud">Cloud Engineering</a></li>
+                            <li><a href="services.html?tab=web"><i class="fas fa-globe" style="margin-right: 10px; color: var(--accent);"></i> Web Development</a></li>
+                            <li><a href="services.html?tab=mobile"><i class="fas fa-mobile-alt" style="margin-right: 10px; color: var(--accent);"></i> Mobile Apps</a></li>
+                            <li><a href="services.html?tab=ai"><i class="fas fa-robot" style="margin-right: 10px; color: var(--accent);"></i> AI & ML Solutions</a></li>
                         </ul>
                     </li>
-                    <li class="has-dropdown"><a href="#">Solutions <i class="fas fa-chevron-down"></i></a>
+                    <li class="has-dropdown">
+                        <a href="#">Solutions <i class="fas fa-chevron-down"></i></a>
                         <ul class="dropdown">
-                            <li><a href="#">Enterprise ERP</a></li>
-                            <li><a href="#">IoT Solutions</a></li>
+                            <li><a href="services.html?tab=accounting"><i class="fas fa-file-invoice-dollar" style="margin-right: 10px; color: var(--accent);"></i> Accounting MS</a></li>
+                            <li><a href="services.html?tab=fleet"><i class="fas fa-truck-moving" style="margin-right: 10px; color: var(--accent);"></i> Fleet MS</a></li>
+                            <li><a href="services.html?tab=visitor"><i class="fas fa-user-check" style="margin-right: 10px; color: var(--accent);"></i> Visitor MS</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Hire Developers</a></li>
-                    <li><a href="#">About Us</a></li>
+                    <li class="has-dropdown">
+                        <a href="projects.html">Projects <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="projects.html?filter=all"><i class="fas fa-th-large" style="margin-right: 10px; color: var(--accent);"></i> All Projects</a></li>
+                            <li><a href="projects.html?filter=business"><i class="fas fa-briefcase" style="margin-right: 10px; color: var(--accent);"></i> Business Website</a></li>
+                            <li><a href="projects.html?filter=ecommerce"><i class="fas fa-shopping-cart" style="margin-right: 10px; color: var(--accent);"></i> E-Commerce</a></li>
+                            <li><a href="projects.html?filter=landing"><i class="fas fa-rocket" style="margin-right: 10px; color: var(--accent);"></i> Landing Website</a></li>
+                            <li><a href="projects.html?filter=software"><i class="fas fa-code" style="margin-right: 10px; color: var(--accent);"></i> Software Development</a></li>
+                            <li><a href="projects.html?filter=app"><i class="fas fa-mobile-alt" style="margin-right: 10px; color: var(--accent);"></i> App Development</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="demo.html" class="btn-proposal">Get Proposal</a></li>
                     <li><a href="index.html#contact" class="btn btn-primary">Contact Us</a></li>
                 </ul>
             </nav>
@@ -84,15 +99,49 @@
                         <li class="tab-item" data-tab="devops"><span>DevOps</span> <i class="fas fa-arrow-right"></i></li>
                         <li class="tab-item" data-tab="data"><span>Data Engineering</span> <i class="fas fa-arrow-right"></i></li>
                         <li class="tab-item" data-tab="web"><span>Web Development</span> <i class="fas fa-arrow-right"></i></li>
-                        <li class="tab-item" data-tab="mobile"><span>Mobile App Development</span> <i class="fas fa-arrow-left"></i></li>
+                        <li class="tab-item" data-tab="mobile"><span>Mobile App Development</span> <i class="fas fa-arrow-right"></i></li>
+                        <li class="tab-item" data-tab="accounting"><span>Accounting Management</span> <i class="fas fa-arrow-right"></i></li>
+                        <li class="tab-item" data-tab="fleet"><span>Fleet Management</span> <i class="fas fa-arrow-right"></i></li>
+                        <li class="tab-item" data-tab="visitor"><span>Visitor Management</span> <i class="fas fa-arrow-right"></i></li>
+                        <li class="tab-item" data-tab="dms"><span>Document Management (DMS)</span> <i class="fas fa-arrow-right"></i></li>
+                        <li class="tab-item" data-tab="ticket"><span>Ticket Management</span> <i class="fas fa-arrow-right"></i></li>
+                        <li class="tab-item" data-tab="manufacturing"><span>Manufacturing Management</span> <i class="fas fa-arrow-right"></i></li>
+                        <li class="tab-item" data-tab="kpi"><span>KPI & Analytics</span> <i class="fas fa-arrow-right"></i></li>
+                        <li class="tab-item" data-tab="booking"><span>Booking & Reservation</span> <i class="fas fa-arrow-right"></i></li>
+                        <li class="tab-item" data-tab="ecommerce"><span>E-commerce Solutions</span> <i class="fas fa-arrow-right"></i></li>
                     </ul>
                 </div>
 
                 <!-- Main Content -->
                 <div class="matrix-content">
                     <div class="tab-content active" id="ai">
-                        <h3>AI/ML Consulting</h3>
-                        <p>Spidyweb provides world-class AI/ML consulting to help you integrate intelligence into your business processes.</p>
+                        <div class="service-detail-header reveal-up">
+                            <div class="text-info">
+                                <h3>AI/ML Consulting</h3>
+                                <p>Spidyweb provides world-class AI/ML consulting to help you integrate intelligence into your business processes. Our solutions are designed to scale with your enterprise.</p>
+                            </div>
+                            <img src="assets/images/services/service-ai.png" alt="AI Solutions" class="service-main-image">
+                        </div>
+
+                        <h4 class="advantages-section-title">Key Advantages</h4>
+                        <div class="advantages-grid">
+                            <div class="advantage-card reveal-up">
+                                <i class="fas fa-bolt"></i>
+                                <h4>Speed</h4>
+                                <p>Accelerate your decision-making with real-time AI insights.</p>
+                            </div>
+                            <div class="advantage-card reveal-up">
+                                <i class="fas fa-shield-alt"></i>
+                                <h4>Security</h4>
+                                <p>Enterprise-grade security for your sensitive business data.</p>
+                            </div>
+                            <div class="advantage-card reveal-up">
+                                <i class="fas fa-chart-line"></i>
+                                <h4>Scalability</h4>
+                                <p>AI models that grow as your data and business grow.</p>
+                            </div>
+                        </div>
+
                         <div class="accordions">
                             <div class="accordion">
                                 <div class="accordion-header">
@@ -103,6 +152,7 @@
                                     <p>Harness the power of custom Large Language Models and Retrieval-Augmented Generation (RAG) to automate customer support and internal knowledge management.</p>
                                 </div>
                             </div>
+                            <!-- ... existing accordions ... -->
                             <div class="accordion">
                                 <div class="accordion-header">
                                     <span>Predictive Analytics</span>
@@ -143,8 +193,33 @@
                     </div>
 
                     <div class="tab-content" id="devops">
-                        <h3>DevOps</h3>
-                        <p>Streamline your development lifecycle and enhance operational efficiency with our expert DevOps practices.</p>
+                        <div class="service-detail-header reveal-up">
+                            <div class="text-info">
+                                <h3>DevOps Solutions</h3>
+                                <p>Automate your software delivery lifecycle with our comprehensive DevOps services. We bridge the gap between development and operations to ensure faster, more reliable releases with maximum uptime.</p>
+                            </div>
+                            <img src="assets/images/services/service-devops.png" alt="DevOps Solutions" class="service-main-image">
+                        </div>
+
+                        <h4 class="advantages-section-title">DevOps Advantages</h4>
+                        <div class="advantages-grid">
+                            <div class="advantage-card reveal-up">
+                                <i class="fas fa-cogs"></i>
+                                <h4>Efficiency</h4>
+                                <p>Faster deployment cycles and significantly reduced time-to-market.</p>
+                            </div>
+                            <div class="advantage-card reveal-up">
+                                <i class="fas fa-check-circle"></i>
+                                <h4>Reliability</h4>
+                                <p>Automated testing and monitoring for stable, error-free releases.</p>
+                            </div>
+                            <div class="advantage-card reveal-up">
+                                <i class="fas fa-user-shield"></i>
+                                <h4>Security</h4>
+                                <p>DevSecOps integration to protect your code and infrastructure at every step.</p>
+                            </div>
+                        </div>
+
                         <div class="accordions">
                             <div class="accordion">
                                 <div class="accordion-header">
@@ -186,8 +261,33 @@
                     </div>
 
                     <div class="tab-content" id="data">
-                        <h3>Data Engineering</h3>
-                        <p>Build robust foundations for your data strategy, enabling advanced analytics and rapid business intelligence.</p>
+                        <div class="service-detail-header reveal-up">
+                            <div class="text-info">
+                                <h3>Data Engineering</h3>
+                                <p>Building the foundation for your data-driven future. We design and implement robust data pipelines and architectures that turn raw data into strategic business assets.</p>
+                            </div>
+                            <img src="assets/images/services/service-data.png" alt="Data Engineering" class="service-main-image">
+                        </div>
+
+                        <h4 class="advantages-section-title">Data Engineering Benefits</h4>
+                        <div class="advantages-grid">
+                            <div class="advantage-card reveal-up">
+                                <i class="fas fa-lightbulb"></i>
+                                <h4>Insight</h4>
+                                <p>Clear visibility and understanding of complex data streams across your organization.</p>
+                            </div>
+                            <div class="advantage-card reveal-up">
+                                <i class="fas fa-running"></i>
+                                <h4>Speed</h4>
+                                <p>High-performance data processing pipelines for real-time decision making.</p>
+                            </div>
+                            <div class="advantage-card reveal-up">
+                                <i class="fas fa-lock"></i>
+                                <h4>Governance</h4>
+                                <p>Secure and compliant data management frameworks that protect your integrity.</p>
+                            </div>
+                        </div>
+
                         <div class="accordions">
                             <div class="accordion">
                                 <div class="accordion-header">
@@ -229,8 +329,33 @@
                     </div>
 
                     <div class="tab-content" id="web">
-                        <h3>Web Development</h3>
-                        <p>We build scalable, high-performance web applications using modern stacks like MERN and Next.js.</p>
+                        <div class="service-detail-header reveal-up">
+                            <div class="text-info">
+                                <h3>Web Development</h3>
+                                <p>We build scalable, high-performance web applications using modern stacks like MERN and Next.js. Our focus is on engagement, performance, and SEO.</p>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop" alt="Web Development" class="service-main-image">
+                        </div>
+
+                        <h4 class="advantages-section-title">Web Development Benefits</h4>
+                        <div class="advantages-grid">
+                            <div class="advantage-card reveal-up">
+                                <i class="fas fa-search"></i>
+                                <h4>SEO Optimized</h4>
+                                <p>Rank higher with search-engine friendly architecture.</p>
+                            </div>
+                            <div class="advantage-card reveal-up">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <h4>Fast Loading</h4>
+                                <p>Optimized assets for lighting-fast performance.</p>
+                            </div>
+                            <div class="advantage-card reveal-up">
+                                <i class="fas fa-mobile-alt"></i>
+                                <h4>Responsive</h4>
+                                <p>Perfect display on desktops, tablets, and phones.</p>
+                            </div>
+                        </div>
+
                         <div class="accordions">
                             <div class="accordion">
                                 <div class="accordion-header">
@@ -281,15 +406,40 @@
                     </div>
 
                     <div class="tab-content" id="mobile">
-                        <h3>Mobile App Development</h3>
-                        <p>Spidyweb specializes in developing custom mobile applications that can be used in both Android and iOS platforms. We use agile development methodologies to deliver creative mobile apps that are feature-rich, intuitive and user-friendly.</p>
+                        <div class="service-detail-header reveal-up">
+                            <div class="text-info">
+                                <h3>Mobile App Development</h3>
+                                <p>Spidyweb specializes in developing custom mobile applications for both Android and iOS. We use agile methodologies to deliver intuitive and user-friendly apps.</p>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2070&auto=format&fit=crop" alt="Mobile App Development" class="service-main-image">
+                        </div>
+
+                        <h4 class="advantages-section-title">Mobile App Advantages</h4>
+                        <div class="advantages-grid">
+                            <div class="advantage-card reveal-up">
+                                <i class="fab fa-apple"></i>
+                                <h4>Native Experience</h4>
+                                <p>High-performance apps optimized for each platform.</p>
+                            </div>
+                            <div class="advantage-card reveal-up">
+                                <i class="fas fa-fingerprint"></i>
+                                <h4>High Security</h4>
+                                <p>Biometric authentication and secure data encryption.</p>
+                            </div>
+                            <div class="advantage-card reveal-up">
+                                <i class="fas fa-sync"></i>
+                                <h4>Offline Access</h4>
+                                <p>Syncing capabilities for low-connectivity areas.</p>
+                            </div>
+                        </div>
+
                         <div class="accordions">
-                            <div class="accordion active">
+                            <div class="accordion">
                                 <div class="accordion-header">
                                     <span>Android Application</span>
-                                    <i class="fas fa-chevron-up"></i>
+                                    <i class="fas fa-chevron-down"></i>
                                 </div>
-                                <div class="accordion-body" style="display: block;">
+                                <div class="accordion-body">
                                     <p>Transform your ideas into powerful Android apps, offering seamless performance, intuitive design & exceptional user experiences.</p>
                                 </div>
                             </div>
@@ -330,6 +480,436 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+
+                    <!-- Accounting Management System -->
+                    <div class="tab-content" id="accounting">
+                        <div class="service-detail-header reveal-up">
+                            <div class="text-info">
+                                <h3>Accounting Management</h3>
+                                <p>Complete financial operations management for modern businesses. Streamline your ledgers, tax compliance, and financial reporting with our intuitive tools.</p>
+                            </div>
+                            <img src="assets/images/services/service-accounting.png" alt="Accounting Management" class="service-main-image">
+                        </div>
+
+                        <h4 class="advantages-section-title">Key Advantages</h4>
+                        <div class="advantages-grid">
+                            <div class="advantage-card reveal-up">
+                                <i class="fas fa-file-invoice-dollar"></i>
+                                <h4>GST/VAT Ready</h4>
+                                <p>Automated tax calculations and compliance reporting.</p>
+                            </div>
+                            <div class="advantage-card reveal-up">
+                                <i class="fas fa-history"></i>
+                                <h4>Audit Trail</h4>
+                                <p>Keep track of every transaction with detailed logs.</p>
+                            </div>
+                            <div class="advantage-card reveal-up">
+                                <i class="fas fa-sync-alt"></i>
+                                <h4>Real-time Sync</h4>
+                                <p>Your financial data updated instantly across all devices.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordions">
+                            <div class="accordion">
+                                <div class="accordion-header"><span>Core Features</span> <i class="fas fa-chevron-down"></i></div>
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li><strong>Ledger Management:</strong> Complete tracking of all financial transactions with real-time updates.</li>
+                                        <li><strong>GST/VAT Compliance:</strong> Automated tax calculations and ready-to-file reporting.</li>
+                                        <li><strong>Invoicing:</strong> Professional invoice generation with automated follow-ups.</li>
+                                        <li><strong>Expense Tracking:</strong> Categorize and monitor spending across departments.</li>
+                                        <li><strong>Profit & Loss:</strong> Dynamic reports to analyze financial performance instantly.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="examples"><strong>Examples:</strong> Tally Solutions, QuickBooks, Zoho Books</p>
+                    </div>
+
+                    <!-- Fleet Management System -->
+                    <div class="tab-content" id="fleet">
+                        <div class="service-detail-header reveal-up">
+                            <div class="text-info">
+                                <h3>Fleet Management System</h3>
+                                <p>Complete control over your logistics and transportation assets. Our Fleet Management system provides real-time tracking, fuel optimization, and driver safety tools to power your supply chain.</p>
+                            </div>
+                            <img src="assets/images/services/service-fleet.png" alt="Fleet Management" class="service-main-image">
+                        </div>
+
+                        <h4 class="advantages-section-title">Fleet Management Advantages</h4>
+                        <div class="advantages-grid">
+                            <div class="advantage-card reveal-up">
+                                <i class="fas fa-gas-pump"></i>
+                                <h4>Optimization</h4>
+                                <p>Significant reduction in fuel costs and vehicle idle time through smart routing.</p>
+                            </div>
+                            <div class="advantage-card reveal-up">
+                                <i class="fas fa-shield-virus"></i>
+                                <h4>Safety</h4>
+                                <p>Real-time monitoring of driver behavior and preventative maintenance alerts.</p>
+                            </div>
+                            <div class="advantage-card reveal-up">
+                                <i class="fas fa-map-marked-alt"></i>
+                                <h4>Visibility</h4>
+                                <p>Full transparency of your entire fleet on a single, intuitive live dashboard.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordions">
+                            <div class="accordion">
+                                <div class="accordion-header"><span>Core Features</span> <i class="fas fa-chevron-down"></i></div>
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li><strong>GPS Tracking:</strong> Real-time location monitoring and geofencing capabilities.</li>
+                                        <li><strong>Fuel Management:</strong> Monitor fuel consumption and detect unauthorized drainage.</li>
+                                        <li><strong>Maintenance Alerts:</strong> Automated scheduling for service and repairs based on mileage.</li>
+                                        <li><strong>Driver Logs:</strong> Digital records of driving hours, behavior, and performance.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="examples"><strong>Examples:</strong> Geotab, Samsara, Verizon Connect</p>
+                    </div>
+
+                    <!-- Visitor Management System -->
+                    <div class="tab-content" id="visitor">
+                        <div class="service-detail-header reveal-up">
+                            <div class="text-info">
+                                <h3>Visitor Management System</h3>
+                                <p>Transform your lobby experience and enhance building security. Our digital visitor management solution provides seamless check-ins and leaves a professional first impression.</p>
+                            </div>
+                            <img src="assets/images/services/service-visitor.png" alt="Visitor Management" class="service-main-image">
+                        </div>
+
+                        <h4 class="advantages-section-title">Visitor Management Benefits</h4>
+                        <div class="advantages-grid">
+                            <div class="advantage-card reveal-up">
+                                <i class="fas fa-door-closed"></i>
+                                <h4>Security</h4>
+                                <p>Instant verification and logging of every person entering your premises.</p>
+                            </div>
+                            <div class="advantage-card reveal-up">
+                                <i class="fas fa-keyboard"></i>
+                                <h4>Efficiency</h4>
+                                <p>Fast, touchless check-ins that drastically reduce reception wait times.</p>
+                            </div>
+                            <div class="advantage-card reveal-up">
+                                <i class="fas fa-id-badge"></i>
+                                <h4>Branding</h4>
+                                <p>A professional, modern first impression for every guest and client.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordions">
+                            <div class="accordion">
+                                <div class="accordion-header"><span>Core Features</span> <i class="fas fa-chevron-down"></i></div>
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li><strong>Visitor Entry:</strong> Quick digital check-in with touchless options.</li>
+                                        <li><strong>ID Card Printing:</strong> Instant generation of visitor badges with photos.</li>
+                                        <li><strong>Security Logs:</strong> Real-time dashboard of all visitors currently on-premise.</li>
+                                        <li><strong>Host Notifications:</strong> Automated SMS/Email alerts to employees when their guest arrives.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Document Management System -->
+                    <div class="tab-content" id="dms">
+                        <div class="service-detail-header reveal-up">
+                            <div class="text-info">
+                                <h3>Document Management (DMS)</h3>
+                                <p>Go paperless and secure your organizational knowledge. Our DMS provides a centralized, searchable repository for all your critical business documents and records.</p>
+                            </div>
+                            <img src="assets/images/services/service-dms.png" alt="Document Management" class="service-main-image">
+                        </div>
+
+                        <h4 class="advantages-section-title">DMS Advantages</h4>
+                        <div class="advantages-grid">
+                            <div class="advantage-card reveal-up">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <h4>Accessibility</h4>
+                                <p>Access documents from anywhere, anytime, with secure cloud storage.</p>
+                            </div>
+                            <div class="advantage-card reveal-up">
+                                <i class="fas fa-file-contract"></i>
+                                <h4>Compliance</h4>
+                                <p>Stay audit-ready with detailed version history, logs, and encrypted storage.</p>
+                            </div>
+                            <div class="advantage-card reveal-up">
+                                <i class="fas fa-search-plus"></i>
+                                <h4>Productivity</h4>
+                                <p>Find any document in seconds with advanced OCR and full-text search.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordions">
+                            <div class="accordion">
+                                <div class="accordion-header"><span>Core Features</span> <i class="fas fa-chevron-down"></i></div>
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li><strong>Smart Upload:</strong> Drag-and-drop file management with OCR search.</li>
+                                        <li><strong>Version Control:</strong> Track changes and revert to previous versions easily.</li>
+                                        <li><strong>Approval Workflow:</strong> Automated routing for document reviews and signatures.</li>
+                                        <li><strong>Access Control:</strong> Role-based permissions to protect sensitive data.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Complaint/Ticket Management System -->
+                    <div class="tab-content" id="ticket">
+                        <div class="service-detail-header reveal-up">
+                            <div class="text-info">
+                                <h3>Ticket Management System</h3>
+                                <p>Deliver world-class customer support with our intelligent ticketing system. Streamline issue resolution and keep your customers happy with structured automated workflows.</p>
+                            </div>
+                            <img src="assets/images/services/service-ticket.png" alt="Ticket Management" class="service-main-image">
+                        </div>
+
+                        <h4 class="advantages-section-title">Support Advantages</h4>
+                        <div class="advantages-grid">
+                            <div class="advantage-card reveal-up">
+                                <i class="fas fa-user-check"></i>
+                                <h4>Accountability</h4>
+                                <p>Every issue is assigned, tracked, and resolved within the defined SLA timeline.</p>
+                            </div>
+                            <div class="advantage-card reveal-up">
+                                <i class="fas fa-comments"></i>
+                                <h4>Clarity</h4>
+                                <p>Unified communication channel for customers and agents to avoid confusion.</p>
+                            </div>
+                            <div class="advantage-card reveal-up">
+                                <i class="fas fa-chart-area"></i>
+                                <h4>Scalability</h4>
+                                <p>Handle growing support volumes effortlessly without compromising quality.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordions">
+                            <div class="accordion">
+                                <div class="accordion-header"><span>Core Features</span> <i class="fas fa-chevron-down"></i></div>
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li><strong>Ticket Creation:</strong> Multi-channel support (Email, Web, Chat) for issue logging.</li>
+                                        <li><strong>Priority Engine:</strong> Automatically categorize tickets based on urgency and SLA.</li>
+                                        <li><strong>Status Tracking:</strong> Real-time visibility into the lifecycle of a complaint.</li>
+                                        <li><strong>SLA Management:</strong> Track resolution times and escalation for overdue tasks.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="examples"><strong>Examples:</strong> Zendesk, Freshdesk, HubSpot Service</p>
+                    </div>
+
+                    <!-- Manufacturing Management System -->
+                    <div class="tab-content" id="manufacturing">
+                        <div class="service-detail-header reveal-up">
+                            <div class="text-info">
+                                <h3>Manufacturing Management</h3>
+                                <p>Digitalize your factory floor for peak performance. Our Manufacturing Management system optimizes production, tracks quality, and manages resources in real-time.</p>
+                            </div>
+                            <img src="assets/images/services/service-manufacturing.png" alt="Manufacturing Management" class="service-main-image">
+                        </div>
+
+                        <h4 class="advantages-section-title">Industrial Advantages</h4>
+                        <div class="advantages-grid">
+                            <div class="advantage-card reveal-up">
+                                <i class="fas fa-recycle"></i>
+                                <h4>Waste Reduction</h4>
+                                <p>Identify and eliminate inefficiencies in your production line to save costs.</p>
+                            </div>
+                            <div class="advantage-card reveal-up">
+                                <i class="fas fa-microscope"></i>
+                                <h4>Quality</h4>
+                                <p>Consistent product standards with automated inspection logs for every batch.</p>
+                            </div>
+                            <div class="advantage-card reveal-up">
+                                <i class="fas fa-sync"></i>
+                                <h4>Agility</h4>
+                                <p>Quickly adapt to production schedule changes and market demand shifts.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordions">
+                            <div class="accordion">
+                                <div class="accordion-header"><span>Core Features</span> <i class="fas fa-chevron-down"></i></div>
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li><strong>BOM Management:</strong> Detailed Bill of Materials with multi-level nesting.</li>
+                                        <li><strong>Production Planning:</strong> Schedule work orders and manage resources efficiently.</li>
+                                        <li><strong>Quality Check:</strong> Automated and manual inspection logs for every batch.</li>
+                                        <li><strong>Machine Tracking:</strong> Monitor machine uptime and predictive maintenance needs.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- KPI & Analytics System -->
+                    <div class="tab-content" id="kpi">
+                        <div class="service-detail-header reveal-up">
+                            <div class="text-info">
+                                <h3>KPI & Analytics System</h3>
+                                <p>Data-driven decisions start here. Our KPI & Analytics platform transforms your complex data into intuitive visual dashboards and actionable business intelligence.</p>
+                            </div>
+                            <img src="assets/images/services/service-kpi.png" alt="KPI Analytics" class="service-main-image">
+                        </div>
+
+                        <h4 class="advantages-section-title">Business Insights</h4>
+                        <div class="advantages-grid">
+                            <div class="advantage-card reveal-up">
+                                <i class="fas fa-bullseye"></i>
+                                <h4>Precision</h4>
+                                <p>Track exactly how your business is performing against your strategic goals.</p>
+                            </div>
+                            <div class="advantage-card reveal-up">
+                                <i class="fas fa-eye"></i>
+                                <h4>Transparency</h4>
+                                <p>Clear visibility for stakeholders across the entire organizational structure.</p>
+                            </div>
+                            <div class="advantage-card reveal-up">
+                                <i class="fas fa-crystal-ball"></i>
+                                <h4>Foresight</h4>
+                                <p>AI-driven analytics to anticipate market trends and business risks early.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordions">
+                            <div class="accordion">
+                                <div class="accordion-header"><span>Core Features</span> <i class="fas fa-chevron-down"></i></div>
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li><strong>Interactive Dashboard:</strong> Custom views for executives and department heads.</li>
+                                        <li><strong>Dynamic Reports:</strong> Automated report generation in PDF, Excel, and CSV.</li>
+                                        <li><strong>KPI Monitoring:</strong> Track real-time progress against business targets.</li>
+                                        <li><strong>Financial Analytics:</strong> In-depth look at revenue, costs, and profitability trends.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Booking/Reservation System -->
+                    <div class="tab-content" id="booking">
+                        <div class="service-detail-header reveal-up">
+                            <div class="text-info">
+                                <h3>Booking & Reservation</h3>
+                                <p>Make it easy for your customers to find you. Our Booking & Reservation system handles appointments, room bookings, and event registrations seamlessly.</p>
+                            </div>
+                            <img src="assets/images/services/service-booking.png" alt="Booking Reservation" class="service-main-image">
+                        </div>
+
+                        <h4 class="advantages-section-title">Booking Benefits</h4>
+                        <div class="advantages-grid">
+                            <div class="advantage-card reveal-up">
+                                <i class="fas fa-clock"></i>
+                                <h4>24/7 Availability</h4>
+                                <p>Take bookings even while you sleep with a fully automated scheduling engine.</p>
+                            </div>
+                            <div class="advantage-card reveal-up">
+                                <i class="fas fa-calendar-check"></i>
+                                <h4>Efficiency</h4>
+                                <p>Reduce no-shows with automated SMS/Email reminders and calendar sync.</p>
+                            </div>
+                            <div class="advantage-card reveal-up">
+                                <i class="fas fa-wallet"></i>
+                                <h4>Revenue</h4>
+                                <p>Capture more bookings and handle deposits securely with payment integration.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordions">
+                            <div class="accordion">
+                                <div class="accordion-header"><span>Core Features</span> <i class="fas fa-chevron-down"></i></div>
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li><strong>Appointment Booking:</strong> 24/7 self-service scheduling for services.</li>
+                                        <li><strong>Hotel Reservation:</strong> Room availability tracking and booking management.</li>
+                                        <li><strong>Event Booking:</strong> Ticket sales and attendee registration for events.</li>
+                                        <li><strong>Calendar Sync:</strong> Automated integration with Google and Outlook calendars.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- E-commerce Management System -->
+                    <div class="tab-content" id="ecommerce">
+                        <div class="service-detail-header reveal-up">
+                            <div class="text-info">
+                                <h3>E-commerce Solutions</h3>
+                                <p>Build, launch, and scale your online business with our end-to-end e-commerce management systems. From inventory to delivery tracking, we cover it all.</p>
+                            </div>
+                            <img src="assets/images/services/service-ecommerce.png" alt="E-commerce Solutions" class="service-main-image">
+                        </div>
+
+                        <h4 class="advantages-section-title">E-commerce Advantages</h4>
+                        <div class="advantages-grid">
+                            <div class="advantage-card reveal-up">
+                                <i class="fas fa-shopping-basket"></i>
+                                <h4>Multi-channel</h4>
+                                <p>Sell across web, mobile, and social media platforms.</p>
+                            </div>
+                            <div class="advantage-card reveal-up">
+                                <i class="fas fa-credit-card"></i>
+                                <h4>Secure Payments</h4>
+                                <p>Integrated with the world's most trusted payment gateways.</p>
+                            </div>
+                            <div class="advantage-card reveal-up">
+                                <i class="fas fa-shipping-fast"></i>
+                                <h4>Logistics Ready</h4>
+                                <p>Automated shipping and real-time delivery tracking.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordions">
+                            <div class="accordion">
+                                <div class="accordion-header"><span>Core Features</span> <i class="fas fa-chevron-down"></i></div>
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li><strong>Product Management:</strong> Manage inventory, variants, and pricing easily.</li>
+                                        <li><strong>Order Processing:</strong> Centralized dashboard for all sales across channels.</li>
+                                        <li><strong>Payment Integration:</strong> Secure checkout with multiple payment methods.</li>
+                                        <li><strong>Delivery Tracking:</strong> Real-time shipping updates for customers.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-portfolio reveal-up" style="margin-top: 50px;">
+                            <h4 style="margin-bottom: 30px; font-size: 1.5rem; color: var(--primary);">Our E-commerce <span class="accent">Portfolio</span></h4>
+                            <div class="project-grid" style="grid-template-columns: repeat(2, 1fr); gap: 20px;">
+                                <!-- Varnet -->
+                                <a href="https://varnetenterprise.com" target="_blank" class="project-card" style="--card-accent: #b71c1c; --btn-bg: #d32f2f; height: 450px;">
+                                    <div class="card-header" style="padding: 30px 15px 10px;">
+                                        <h3 style="font-size: 1.2rem;">VARNET ENTERPRISE</h3>
+                                        <span class="btn-contact-pill" style="padding: 8px 25px; font-size: 0.75rem;">LIVE LINK</span>
+                                    </div>
+                                    <div class="card-body" style="padding-bottom: 20px;">
+                                        <img src="assets/images/projects/varnet-enterprise.webp" alt="Varnet Enterprise" style="max-height: 250px;">
+                                    </div>
+                                </a>
+                                <!-- Tattvamart -->
+                                <a href="https://tattvamarts.com" target="_blank" class="project-card" style="--card-accent: #ef6c00; --btn-bg: #ff9800; height: 450px;">
+                                    <div class="card-header" style="padding: 30px 15px 10px;">
+                                        <h3 style="font-size: 1.2rem;">TATTAVAMART</h3>
+                                        <span class="btn-contact-pill" style="padding: 8px 25px; font-size: 0.75rem;">LIVE LINK</span>
+                                    </div>
+                                    <div class="card-body" style="padding-bottom: 20px;">
+                                        <img src="assets/images/projects/tattavamart.webp" alt="Tattvamart" style="max-height: 250px;">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="text-center" style="margin-top: 30px;">
+                                <a href="projects.html" class="btn btn-outline">View Full Portfolio <i class="fas fa-external-link-alt" style="margin-left: 8px;"></i></a>
+                            </div>
+                        </div>
+
+                        <p class="examples" style="margin-top: 40px;"><strong>Examples:</strong> Shopify, WooCommerce, Magento</p>
                     </div>
                 </div>
             </div>

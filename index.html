@@ -8,21 +8,114 @@
     <meta name="description"
         content="Spidyweb Service is a leading software development company specializing in AI, Web, and Mobile App solutions.">
     <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@300;400;600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=1.1">
+    <style>
+        .project-grid {
+            display: grid !important;
+            grid-template-columns: repeat(3, 1fr) !important;
+            gap: 40px !important;
+            margin-top: 40px !important;
+        }
+        @media (max-width: 1200px) {
+            .project-grid { grid-template-columns: repeat(2, 1fr) !important; }
+        }
+        @media (max-width: 768px) {
+            .project-grid { grid-template-columns: 1fr !important; }
+        }
+        .project-card {
+            background: linear-gradient(to bottom, #ffffff 40%, var(--card-accent, #f0f0f0) 40%) !important;
+            border-radius: 40px !important;
+            overflow: hidden !important;
+            box-shadow: 0 15px 45px rgba(0,0,0,0.05) !important;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+            border: 1px solid #eee !important;
+            display: flex !important;
+            flex-direction: column !important;
+            text-decoration: none !important;
+            position: relative !important;
+            height: 620px !important;
+            cursor: pointer !important;
+        }
+        .project-card:hover {
+            transform: translateY(-15px) !important;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.1) !important;
+        }
+        .bg-pattern-overlay {
+            position: absolute !important;
+            top: 40% !important;
+            left: 0 !important;
+            right: 0 !important;
+            bottom: 0 !important;
+            background: url('assets/images/ui/bg-pattern.png') center/cover !important;
+            opacity: 0.12 !important;
+            z-index: 2 !important;
+            pointer-events: none !important; /* Fixes click issue */
+        }
+        .card-header {
+            padding: 50px 20px 20px !important;
+            text-align: center !important;
+            position: relative !important;
+            z-index: 5 !important;
+            background: white !important;
+        }
+        .card-header .top-line, .card-header .bottom-line {
+            width: 100px !important;
+            height: 1px !important;
+            background: #e0e0e0 !important;
+            margin: 0 auto !important;
+        }
+        .card-header h3 {
+            font-size: 1.5rem !important;
+            color: #00265B !important;
+            margin: 15px 0 !important;
+            font-weight: 700 !important;
+            text-transform: uppercase !important;
+            letter-spacing: 1px !important;
+        }
+        .btn-contact-pill {
+            margin-top: 15px !important;
+            display: inline-block !important;
+            background: var(--btn-bg, #000) !important;
+            color: white !important;
+            padding: 10px 30px !important;
+            border-radius: 50px !important; /* Ensures pill shape */
+            font-size: 0.8rem !important;
+            font-weight: 800 !important;
+            text-transform: uppercase !important;
+        }
+        .card-body {
+            flex: 1 !important;
+            display: flex !important;
+            align-items: flex-end !important;
+            justify-content: center !important;
+            padding: 0 20px 40px !important;
+            position: relative !important;
+            z-index: 5 !important;
+        }
+        .card-body img {
+            width: 100% !important;
+            height: auto !important;
+            max-height: 400px !important;
+            object-fit: contain !important;
+            filter: drop-shadow(0 20px 40px rgba(0,0,0,0.15)) !important;
+            transition: all 0.4s ease !important;
+        }
+        .project-card:hover .card-body img {
+            transform: scale(1.03) translateY(-5px) !important;
+        }
+    </style>
 </head>
 
 <body>
     <!-- Top Bar -->
     <div class="top-bar">
-        <div class="container flex-justify">
+        <div class="container flex-align">
             <div class="contact-info">
-                <span><i class="fas fa-phone"></i> +91 6356647453</span>
-                <span><i class="fas fa-envelope"></i> spidywebtech7@gmail.com</span>
+                <span><i class="fas fa-phone-alt"></i> +91 6356647453</span>
+                <span style="margin-left: 20px;"><i class="fas fa-envelope"></i> spidywebtech7@gmail.com</span>
             </div>
             <div class="social-links">
                 <a href="#"><i class="fab fa-linkedin-in"></i></a>
@@ -37,26 +130,41 @@
     <header id="main-header">
         <div class="container flex-align">
             <div class="logo">
-                <a href="/">SPIDYWEB<span>SERVICE</span></a>
+                <a href="index.html">SPIDYWEB<span>SERVICE</span></a>
             </div>
             <nav id="nav-menu">
                 <ul>
-                    <li class="has-dropdown"><a href="services.html">Services <i class="fas fa-chevron-down"></i></a>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li class="has-dropdown">
+                        <a href="services.html">Services <i class="fas fa-chevron-down"></i></a>
                         <ul class="dropdown">
-                            <li><a href="services.html?tab=web">Web Development</a></li>
-                            <li><a href="services.html?tab=mobile">Mobile App Development</a></li>
-                            <li><a href="services.html?tab=ai">AI/ML Solutions</a></li>
-                            <li><a href="services.html?tab=cloud">Cloud Engineering</a></li>
+                            <li><a href="services.html?tab=web"><i class="fas fa-globe" style="margin-right: 10px; color: var(--accent);"></i> Web Development</a></li>
+                            <li><a href="services.html?tab=mobile"><i class="fas fa-mobile-alt" style="margin-right: 10px; color: var(--accent);"></i> Mobile Apps</a></li>
+                            <li><a href="services.html?tab=ai"><i class="fas fa-robot" style="margin-right: 10px; color: var(--accent);"></i> AI & ML Solutions</a></li>
                         </ul>
                     </li>
-                    <li class="has-dropdown"><a href="#">Solutions <i class="fas fa-chevron-down"></i></a>
+                    <li class="has-dropdown">
+                        <a href="#">Solutions <i class="fas fa-chevron-down"></i></a>
                         <ul class="dropdown">
-                            <li><a href="#enterprise">Enterprise ERP</a></li>
-                            <li><a href="#iot">IoT Solutions</a></li>
+                            <li><a href="services.html?tab=accounting"><i class="fas fa-file-invoice-dollar" style="margin-right: 10px; color: var(--accent);"></i> Accounting MS</a></li>
+                            <li><a href="services.html?tab=fleet"><i class="fas fa-truck-moving" style="margin-right: 10px; color: var(--accent);"></i> Fleet MS</a></li>
+                            <li><a href="services.html?tab=visitor"><i class="fas fa-user-check" style="margin-right: 10px; color: var(--accent);"></i> Visitor MS</a></li>
                         </ul>
                     </li>
-                    <li><a href="#hire">Hire Developers</a></li>
-                    <li><a href="#about">About Us</a></li>
+                    <li class="has-dropdown">
+                        <a href="projects.html" class="active-link">Projects <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="projects.html?filter=all"><i class="fas fa-th-large" style="margin-right: 10px; color: var(--accent);"></i> All Projects</a></li>
+                            <li><a href="projects.html?filter=business"><i class="fas fa-briefcase" style="margin-right: 10px; color: var(--accent);"></i> Business Website</a></li>
+                            <li><a href="projects.html?filter=ecommerce"><i class="fas fa-shopping-cart" style="margin-right: 10px; color: var(--accent);"></i> E-Commerce</a></li>
+                            <li><a href="projects.html?filter=landing"><i class="fas fa-rocket" style="margin-right: 10px; color: var(--accent);"></i> Landing Website</a></li>
+                            <li><a href="projects.html?filter=software"><i class="fas fa-code" style="margin-right: 10px; color: var(--accent);"></i> Software Development</a></li>
+                            <li><a href="projects.html?filter=app"><i class="fas fa-mobile-alt" style="margin-right: 10px; color: var(--accent);"></i> App Development</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="demo.html" class="btn-proposal">Get Proposal</a></li>
                     <li><a href="#contact" class="btn btn-primary">Contact Us</a></li>
                 </ul>
             </nav>
@@ -69,32 +177,32 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="hero-overlay"></div>
-        <div class="container hero-content">
-            <h1 class="reveal-up">Cutting-Edge Web & Mobile Solutions with <span class="accent">AI Intelligence</span>
-            </h1>
-            <p class="reveal-up">Empowering businesses through scalable software, data engineering, and custom LLMs.
-                Transform your digital footprint with Spidyweb Service.</p>
-            <div class="hero-btns reveal-up">
-                <a href="#contact" class="btn btn-primary btn-lg">Get Started</a>
-                <a href="#services" class="btn btn-outline btn-lg">Our Services</a>
+        <div class="container">
+            <div class="hero-content reveal-up">
+                <h1>Cutting-Edge Web & Mobile Solutions with <span class="accent">AI Intelligence</span></h1>
+                <p>We empower businesses with scalable, high-performance software that drives growth and innovation in the digital age.</p>
+                <div class="hero-btns">
+                    <a href="demo.html" class="btn btn-primary">Get Free Proposal</a>
+                    <a href="projects.html" class="btn btn-outline">View Projects</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Stats Section -->
-    <section class="stats-section">
+    <!-- Stats Bar -->
+    <section class="stats-bar">
         <div class="container grid grid-4">
             <div class="stat-card reveal-up">
-                <h3 class="counter" data-target="3">0</h3>+
-                <p>Years Experience</p>
-            </div>
-            <div class="stat-card reveal-up">
-                <h3 class="counter" data-target="50">0</h3>+
+                <h3 class="counter" data-target="250">0</h3>+
                 <p>Projects Delivered</p>
             </div>
             <div class="stat-card reveal-up">
-                <h3 class="counter" data-target="100">0</h3>+
-                <p>Global Clients</p>
+                <h3 class="counter" data-target="150">0</h3>+
+                <p>Happy Clients</p>
+            </div>
+            <div class="stat-card reveal-up">
+                <h3 class="counter" data-target="15">0</h3>+
+                <p>Awards Won</p>
             </div>
             <div class="stat-card reveal-up">
                 <h3 class="counter" data-target="50">0</h3>+
@@ -108,22 +216,191 @@
         <div class="container text-center">
             <h2 class="section-title reveal-up">Our Comprehensive <span class="accent">Services</span></h2>
             <div class="grid grid-3">
-                <div class="service-card reveal-up">
+                <!-- Web Development -->
+                <a href="services.html?tab=web" class="service-card reveal-up">
                     <div class="icon-box"><i class="fas fa-laptop-code"></i></div>
                     <h3>Web Development</h3>
                     <p>High-performance websites built with React, Angular, and Next.js for maximum engagement.</p>
-                </div>
-                <div class="service-card reveal-up">
+                </a>
+                <!-- Mobile Apps -->
+                <a href="services.html?tab=mobile" class="service-card reveal-up">
                     <div class="icon-box"><i class="fas fa-mobile-alt"></i></div>
                     <h3>Mobile Apps</h3>
                     <p>Native and cross-platform mobile apps for iOS and Android using Flutter and Swift.</p>
-                </div>
-                <div class="service-card reveal-up">
+                </a>
+                <!-- AI & ML -->
+                <a href="services.html?tab=ai" class="service-card reveal-up">
                     <div class="icon-box"><i class="fas fa-brain"></i></div>
                     <h3>AI & ML</h3>
-                    <p>Custom AI solutions, Generative AI models, and RAG architectures tailored for enterprise needs.
-                    </p>
-                </div>
+                    <p>Custom AI solutions, Generative AI models, and RAG architectures tailored for enterprise needs.</p>
+                </a>
+                <!-- DevOps -->
+                <a href="services.html?tab=devops" class="service-card reveal-up">
+                    <div class="icon-box"><i class="fas fa-infinity"></i></div>
+                    <h3>DevOps</h3>
+                    <p>Streamline software delivery with CI/CD pipelines, containerization, and cloud automation.</p>
+                </a>
+                <!-- Data Engineering -->
+                <a href="services.html?tab=data" class="service-card reveal-up">
+                    <div class="icon-box"><i class="fas fa-database"></i></div>
+                    <h3>Data Engineering</h3>
+                    <p>Build robust data pipelines, warehouses, and ETL processes for data-driven decisions.</p>
+                </a>
+                <!-- Accounting Management System -->
+                <a href="services.html?tab=accounting" class="service-card reveal-up">
+                    <div class="icon-box"><i class="fas fa-calculator"></i></div>
+                    <h3>Accounting Management</h3>
+                    <p>Streamline financial operations with Ledger, GST/VAT, Invoicing, and Profit/Loss tracking.</p>
+                </a>
+                <!-- Fleet Management System -->
+                <a href="services.html?tab=fleet" class="service-card reveal-up">
+                    <div class="icon-box"><i class="fas fa-truck-moving"></i></div>
+                    <h3>Fleet Management</h3>
+                    <p>Real-time vehicle tracking, fuel management, maintenance alerts, and driver log tracking.</p>
+                </a>
+                <!-- Visitor Management System -->
+                <a href="services.html?tab=visitor" class="service-card reveal-up">
+                    <div class="icon-box"><i class="fas fa-user-check"></i></div>
+                    <h3>Visitor Management</h3>
+                    <p>Modern office visitor tracking with digital entry, ID card generation, and security logs.</p>
+                </a>
+                <!-- Document Management System -->
+                <a href="services.html?tab=dms" class="service-card reveal-up">
+                    <div class="icon-box"><i class="fas fa-file-pdf"></i></div>
+                    <h3>Document Management</h3>
+                    <p>Secure storage and management of documents with version control and approval workflows.</p>
+                </a>
+                <!-- Complaint/Ticket Management System -->
+                <a href="services.html?tab=ticket" class="service-card reveal-up">
+                    <div class="icon-box"><i class="fas fa-ticket-alt"></i></div>
+                    <h3>Ticket Management</h3>
+                    <p>Efficient support issue tracking with priority setting, status monitoring, and SLA management.</p>
+                </a>
+                <!-- Manufacturing Management System -->
+                <a href="services.html?tab=manufacturing" class="service-card reveal-up">
+                    <div class="icon-box"><i class="fas fa-industry"></i></div>
+                    <h3>Manufacturing Management</h3>
+                    <p>Factory production management with BOM, planning, quality checks, and machine tracking.</p>
+                </a>
+                <!-- KPI & Analytics System -->
+                <a href="services.html?tab=kpi" class="service-card reveal-up">
+                    <div class="icon-box"><i class="fas fa-chart-line"></i></div>
+                    <h3>KPI & Analytics</h3>
+                    <p>Business performance tracking with real-time dashboards, charts, and financial analytics.</p>
+                </a>
+                <!-- Booking/Reservation System -->
+                <a href="services.html?tab=booking" class="service-card reveal-up">
+                    <div class="icon-box"><i class="fas fa-calendar-check"></i></div>
+                    <h3>Booking & Reservation</h3>
+                    <p>Seamless appointment booking, hotel reservations, and event management solutions.</p>
+                </a>
+                <!-- E-commerce Management System -->
+                <a href="services.html?tab=ecommerce" class="service-card reveal-up">
+                    <div class="icon-box"><i class="fas fa-shopping-cart"></i></div>
+                    <h3>E-commerce Solutions</h3>
+                    <p>Comprehensive product management, order processing, and delivery tracking systems.</p>
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="projects-home" class="portfolio-section" style="background: #fdfdfd; padding-top: 20px;">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 60px;">
+                <h2 class="section-title reveal-up">Featured <span class="accent">Web Projects</span></h2>
+                <p class="reveal-up" style="max-width: 700px; margin: 0 auto; color: var(--text-muted); font-size: 1.1rem;">Explore our high-impact website development projects delivered with precision and innovation.</p>
+            </div>
+
+            <div class="project-grid">
+                <!-- VH Accounting -->
+                <a href="https://vh-accounting.com/" target="_blank" class="project-card reveal-up" style="--card-accent: #26a69a; --btn-bg: #00bcd4;">
+                    <div class="bg-pattern-overlay"></div>
+                    <div class="card-header">
+                        <div class="top-line"></div>
+                        <h3>VH ACCOUNTING</h3>
+                        <div class="bottom-line"></div>
+                        <span class="btn-contact-pill">CONTACT NOW</span>
+                    </div>
+                    <div class="card-body">
+                        <img src="assets/images/projects/vh-accounting.webp" alt="VH Accounting">
+                    </div>
+                </a>
+
+                <!-- Evonstone Ceramics -->
+                <a href="https://evonceramics.com/" target="_blank" class="project-card reveal-up" style="--card-accent: #bdbdbd; --btn-bg: #000000;">
+                    <div class="bg-pattern-overlay"></div>
+                    <div class="card-header">
+                        <div class="top-line"></div>
+                        <h3>EVONSTONE CERAMICS</h3>
+                        <div class="bottom-line"></div>
+                        <span class="btn-contact-pill">CONTACT NOW</span>
+                    </div>
+                    <div class="card-body">
+                        <img src="assets/images/projects/evonstone-ceramics.webp" alt="Evonstone Ceramics">
+                    </div>
+                </a>
+
+                <!-- 7D Design Studio -->
+                <a href="https://7ddesignstudios.in/" target="_blank" class="project-card reveal-up" style="--card-accent: #8d6e63; --btn-bg: #8d6e63;">
+                    <div class="bg-pattern-overlay"></div>
+                    <div class="card-header">
+                        <div class="top-line"></div>
+                        <h3>7D DESIGN STUDIO</h3>
+                        <div class="bottom-line"></div>
+                        <span class="btn-contact-pill">CONTACT NOW</span>
+                    </div>
+                    <div class="card-body">
+                        <img src="assets/images/projects/7d-design-studio.webp" alt="7D Design Studio">
+                    </div>
+                </a>
+
+                <!-- Varnet Enterprise -->
+                <a href="https://varnetenterprise.com" target="_blank" class="project-card reveal-up" style="--card-accent: #b71c1c; --btn-bg: #d32f2f;">
+                    <div class="bg-pattern-overlay"></div>
+                    <div class="card-header">
+                        <div class="top-line"></div>
+                        <h3>VARNET ENTERPRISE</h3>
+                        <div class="bottom-line"></div>
+                        <span class="btn-contact-pill">CONTACT NOW</span>
+                    </div>
+                    <div class="card-body">
+                        <img src="assets/images/projects/varnet-enterprise.webp" alt="Varnet Enterprise">
+                    </div>
+                </a>
+
+                <!-- Tattavamart -->
+                <a href="https://tattvamarts.com" target="_blank" class="project-card reveal-up" style="--card-accent: #ef6c00; --btn-bg: #ff9800;">
+                    <div class="bg-pattern-overlay"></div>
+                    <div class="card-header">
+                        <div class="top-line"></div>
+                        <h3>TATTAVAMART</h3>
+                        <div class="bottom-line"></div>
+                        <span class="btn-contact-pill">CONTACT NOW</span>
+                    </div>
+                    <div class="card-body">
+                        <img src="assets/images/projects/tattavamart.webp" alt="Tattavamart">
+                    </div>
+                </a>
+
+                <!-- Devrshree -->
+                <a href="https://devrshree.com" target="_blank" class="project-card reveal-up" style="--card-accent: #4a148c; --btn-bg: #7b1fa2;">
+                    <div class="bg-pattern-overlay"></div>
+                    <div class="card-header">
+                        <div class="top-line"></div>
+                        <h3>DEVRSHREE</h3>
+                        <div class="bottom-line"></div>
+                        <span class="btn-contact-pill">CONTACT NOW</span>
+                    </div>
+                    <div class="card-body">
+                        <img src="assets/images/projects/devrshree.webp" alt="Devrshree">
+                    </div>
+                </a>
+            </div>
+
+            <div class="text-center" style="margin-top: 60px;">
+                <a href="projects.html" class="btn btn-primary btn-lg">View More Projects <i class="fas fa-arrow-right" style="margin-left: 10px;"></i></a>
             </div>
         </div>
     </section>
@@ -181,7 +458,7 @@
             <div class="footer-links">
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="#">About Us</a></li>
+                    <li><a href="about.html">About Us</a></li>
                     <li><a href="services.html">Our Services</a></li>
                     <li><a href="#">Success Stories</a></li>
                     <li><a href="#contact">Contact</a></li>

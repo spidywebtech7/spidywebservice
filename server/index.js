@@ -47,6 +47,10 @@ app.get('/services.html', (req, res) => {
     res.sendFile(path.resolve(__dirname, '..', 'services.html'));
 });
 
-app.listen(PORT, '0.0.0.0', () => {
-    console.log(`Server is running at http://localhost:${PORT}`);
-});
+if (require.main === module) {
+    app.listen(PORT, '0.0.0.0', () => {
+        console.log(`Server is running at http://localhost:${PORT}`);
+    });
+}
+
+module.exports = app;

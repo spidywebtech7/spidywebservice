@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Spidyweb Service - Tech Insights & Innovation</title>
+    <meta name="description" content="Stay updated with the latest in AI, Web Development, and Enterprise Solutions from the Spidyweb Service team.">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="blog-page">
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container flex-justify">
+            <div class="contact-info">
+                <span><i class="fas fa-phone"></i> +91 6356647453</span>
+                <span><i class="fas fa-envelope"></i> spidywebtech7@gmail.com</span>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header / Navigation -->
+    <header id="main-header">
+        <div class="container flex-align">
+            <div class="logo">
+                <a href="index.html">SPIDYWEB<span>SERVICE</span></a>
+            </div>
+            <nav id="nav-menu">
+                <ul>
+                    <li class="has-dropdown">
+                        <a href="services.html">Services <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="services.html?tab=web">Web Development</a></li>
+                            <li><a href="services.html?tab=mobile">Mobile Apps</a></li>
+                            <li><a href="services.html?tab=ai">AI & ML Solutions</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">Solutions <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="services.html?tab=accounting">Accounting MS</a></li>
+                            <li><a href="services.html?tab=fleet">Fleet MS</a></li>
+                            <li><a href="services.html?tab=visitor">Visitor MS</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="index.html#contact" class="btn btn-primary">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-toggle" id="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Blog Hero -->
+    <section class="blog-hero">
+        <div class="container text-center">
+            <h1 class="reveal-up">Our <span class="accent">Blog</span></h1>
+            <p class="reveal-up">Explore the latest trends, insights, and innovations in the world of technology.</p>
+        </div>
+    </section>
+
+    <!-- Blog Grid Section -->
+    <section class="blog-grid-section">
+        <div class="container flex-justify blog-layout">
+            <!-- Sidebar -->
+            <aside class="blog-sidebar">
+                <div class="sidebar-widget search-widget reveal-up">
+                    <form action="#">
+                        <input type="text" placeholder="Search articles...">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+
+                <div class="sidebar-widget tags-widget reveal-up">
+                    <h3 class="widget-title">Tags Cloud</h3>
+                    <div class="tags-cloud">
+                        <a href="#" class="tag-pill">Artificial Intelligence</a>
+                        <a href="#" class="tag-pill">Web Development</a>
+                        <a href="#" class="tag-pill">Mobile Apps</a>
+                        <a href="#" class="tag-pill">Cloud Engineering</a>
+                        <a href="#" class="tag-pill">Logistics</a>
+                        <a href="#" class="tag-pill">Digital Transformation</a>
+                        <a href="#" class="tag-pill">Innovation</a>
+                        <a href="#" class="tag-pill">ERP Systems</a>
+                    </div>
+                </div>
+
+                <div class="sidebar-widget recent-posts reveal-up">
+                    <h3 class="widget-title">Recent Posts</h3>
+                    <div class="recent-post-item">
+                        <img src="assets/images/blog/blog-ai.png" alt="AI Future">
+                        <div>
+                            <a href="blog-post.html">The Future of AI in Enterprise Management</a>
+                            <span>May 10, 2026</span>
+                        </div>
+                    </div>
+                    <div class="recent-post-item">
+                        <img src="assets/images/blog/blog-fleet.png" alt="Fleet Management">
+                        <div>
+                            <a href="blog-post.html">Optimizing Fleet Logistics with IoT</a>
+                            <span>May 08, 2026</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="blog-main-content">
+                <!-- Blog Card 1 -->
+                <article class="blog-card horizontal reveal-up">
+                    <div class="blog-card-image">
+                        <img src="assets/images/blog/blog-ai.png" alt="AI in Enterprise">
+                        <div class="blog-category">Artificial Intelligence</div>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-user"></i> Admin</span>
+                            <span><i class="fas fa-calendar-alt"></i> May 10, 2026</span>
+                        </div>
+                        <h2 class="blog-title"><a href="blog-post.html">The Future of AI in Enterprise Management</a></h2>
+                        <p class="blog-excerpt">Discover how Generative AI and Large Language Models are revolutionizing the way enterprises manage their internal workflows and customer data...</p>
+                        <a href="blog-post.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Card 2 -->
+                <article class="blog-card horizontal reveal-up">
+                    <div class="blog-card-image">
+                        <img src="assets/images/blog/blog-fleet.png" alt="Fleet Logistics">
+                        <div class="blog-category">Logistics</div>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-user"></i> Admin</span>
+                            <span><i class="fas fa-calendar-alt"></i> May 08, 2026</span>
+                        </div>
+                        <h2 class="blog-title"><a href="blog-post.html">Optimizing Fleet Logistics with Real-time IoT Data</a></h2>
+                        <p class="blog-excerpt">In the fast-paced world of logistics, real-time data is king. Learn how IoT sensors and custom fleet management software are driving efficiency...</p>
+                        <a href="blog-post.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Card 3 -->
+                <article class="blog-card horizontal reveal-up">
+                    <div class="blog-card-image">
+                        <img src="assets/images/blog/blog-dev.png" alt="Modern Web Dev">
+                        <div class="blog-category">Web Development</div>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-user"></i> Admin</span>
+                            <span><i class="fas fa-calendar-alt"></i> May 05, 2026</span>
+                        </div>
+                        <h2 class="blog-title"><a href="blog-post.html">Why Next.js is the Ultimate Choice for Enterprise Web Apps</a></h2>
+                        <p class="blog-excerpt">Performance, SEO, and developer experience are the three pillars of modern web development. See why Next.js stands out in 2026...</p>
+                        <a href="blog-post.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Pagination -->
+                <div class="pagination reveal-up">
+                    <a href="#" class="page-link active">1</a>
+                    <a href="#" class="page-link">2</a>
+                    <a href="#" class="page-link">3</a>
+                    <a href="#" class="page-link"><i class="fas fa-chevron-right"></i></a>
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container grid grid-4">
+            <div class="footer-brand">
+                <h3>SPIDYWEB<span>SERVICE</span></h3>
+                <p>Your partner in digital transformation and AI innovation.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Our Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="services.html?tab=web">Web Development</a></li>
+                    <li><a href="services.html?tab=mobile">Mobile Apps</a></li>
+                    <li><a href="services.html?tab=ai">AI/ML Consulting</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Newsletter</h4>
+                <p>Subscribe to get the latest tech insights.</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Email Address">
+                    <button><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container flex-justify">
+                <p>&copy; 2026 Spidyweb Service. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Widget -->
+    <div class="whatsapp-widget">
+        <a href="https://wa.me/916356647453" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

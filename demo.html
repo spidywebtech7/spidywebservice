@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Demo & Proposal | Spidyweb Service</title>
+    <meta name="description" content="Generate a custom business proposal in real-time with Spidyweb Service's interactive demo.">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="demo-page">
+    <!-- Header / Navigation -->
+    <header id="main-header">
+        <div class="container flex-align">
+            <div class="logo">
+                <a href="index.html">SPIDYWEB<span>SERVICE</span></a>
+            </div>
+            <nav id="nav-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="demo.html" class="active">Get Proposal</a></li>
+                    <li><a href="index.html#contact" class="btn btn-primary">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-toggle" id="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Demo Hero -->
+    <section class="demo-hero">
+        <div class="container">
+            <h1 class="reveal-up">Build Your <span class="accent">Digital Future</span></h1>
+            <p class="reveal-up">Fill in your business details below to receive a custom digital proposal and a real-time WhatsApp inquiry.</p>
+        </div>
+    </section>
+
+    <!-- Demo Form Container -->
+    <section class="demo-section">
+        <div class="container">
+            <div class="demo-container" id="demo-form-container">
+                <!-- Form Progress -->
+                <div class="form-progress">
+                    <div class="progress-step active" data-step="1">
+                        <div class="step-number">1</div>
+                        <div class="step-label">Business Info</div>
+                    </div>
+                    <div class="progress-step" data-step="2">
+                        <div class="step-number">2</div>
+                        <div class="step-label">Project Needs</div>
+                    </div>
+                    <div class="progress-step" data-step="3">
+                        <div class="step-number">3</div>
+                        <div class="step-label">Contact Details</div>
+                    </div>
+                </div>
+
+                <form id="business-demo-form" novalidate>
+                    <!-- Step 1: Business Profile -->
+                    <div class="form-step active" id="step-1">
+                        <h2><i class="fas fa-briefcase"></i> Tell us about your Business</h2>
+                        <div class="form-grid-demo">
+                            <div class="form-group-full">
+                                <input type="text" id="business-name" placeholder="Business / Company Name" required>
+                            </div>
+                            <div>
+                                <select id="business-industry" style="width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 10px; outline: none;" required>
+                                    <option value="" disabled selected>Select Industry</option>
+                                    <option value="Technology">Technology</option>
+                                    <option value="E-commerce">E-commerce</option>
+                                    <option value="Healthcare">Healthcare</option>
+                                    <option value="Real Estate">Real Estate</option>
+                                    <option value="Education">Education</option>
+                                    <option value="Manufacturing">Manufacturing</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div>
+                                <input type="text" id="business-website" placeholder="Current Website (if any)">
+                            </div>
+                        </div>
+                        <div class="form-navigation">
+                            <div></div>
+                            <button type="button" class="btn btn-primary next-step" data-next="2">Continue <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Project Needs -->
+                    <div class="form-step" id="step-2">
+                        <h2><i class="fas fa-lightbulb"></i> What do you need?</h2>
+                        <p>Select the services you are interested in:</p>
+                        <div class="service-checkbox-grid">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="service-web" value="Web Development" class="service-check">
+                                <label for="service-web" class="checkbox-label"><i class="fas fa-globe"></i> Web Dev</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="service-mobile" value="Mobile Apps" class="service-check">
+                                <label for="service-mobile" class="checkbox-label"><i class="fas fa-mobile-alt"></i> Mobile App</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="service-ai" value="AI & ML" class="service-check">
+                                <label for="service-ai" class="checkbox-label"><i class="fas fa-robot"></i> AI / ML</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="service-erp" value="ERP Solutions" class="service-check">
+                                <label for="service-erp" class="checkbox-label"><i class="fas fa-cogs"></i> ERP / MS</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="service-seo" value="SEO & Marketing" class="service-check">
+                                <label for="service-seo" class="checkbox-label"><i class="fas fa-chart-line"></i> SEO</label>
+                            </div>
+                        </div>
+
+                        <div class="form-grid-demo" style="margin-top: 30px;">
+                            <div>
+                                <select id="project-budget" style="width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 10px; outline: none;" required>
+                                    <option value="" disabled selected>Est. Budget Range</option>
+                                    <option value="$1k - $5k">$1k - $5k</option>
+                                    <option value="$5k - $15k">$5k - $15k</option>
+                                    <option value="$15k - $50k">$15k - $50k</option>
+                                    <option value="$50k+">$50k+</option>
+                                </select>
+                            </div>
+                            <div>
+                                <select id="project-timeline" style="width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 10px; outline: none;" required>
+                                    <option value="" disabled selected>Timeline</option>
+                                    <option value="1 Month">1 Month</option>
+                                    <option value="2-3 Months">2-3 Months</option>
+                                    <option value="6+ Months">6+ Months</option>
+                                    <option value="Urgent">Urgent</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-navigation">
+                            <button type="button" class="btn btn-outline prev-step" data-prev="1" style="color: var(--primary); border-color: #eee;">Back</button>
+                            <button type="button" class="btn btn-primary next-step" data-next="3">Almost Done <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Contact Details -->
+                    <div class="form-step" id="step-3">
+                        <h2><i class="fas fa-user-circle"></i> How can we reach you?</h2>
+                        <div class="form-grid-demo">
+                            <div>
+                                <input type="text" id="contact-name" placeholder="Your Name" required>
+                            </div>
+                            <div>
+                                <input type="email" id="contact-email" placeholder="Email Address" required>
+                            </div>
+                            <div class="form-group-full">
+                                <input type="tel" id="contact-phone" placeholder="WhatsApp / Phone Number" required>
+                            </div>
+                        </div>
+                        <div class="form-navigation">
+                            <button type="button" class="btn btn-outline prev-step" data-prev="2" style="color: var(--primary); border-color: #eee;">Back</button>
+                            <button type="submit" class="btn btn-primary" id="submit-demo">Generate Proposal <i class="fas fa-magic"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Digital Proposal UI (Hidden by default) -->
+            <div class="proposal-container" id="proposal-result">
+                <div class="proposal-card">
+                    <div class="proposal-header">
+                        <div class="proposal-logo">SPIDYWEB<span>SERVICE</span></div>
+                        <div class="proposal-title-info">
+                            <div>
+                                <h1>Digital Transformation Proposal</h1>
+                                <p class="proposal-for">Prepared for: <span id="prop-business-name">Business Name</span></p>
+                            </div>
+                            <div class="proposal-date" id="prop-date">May 15, 2026</div>
+                        </div>
+                    </div>
+                    <div class="proposal-body">
+                        <div class="proposal-section">
+                            <h3><i class="fas fa-info-circle"></i> Project Summary</h3>
+                            <div class="proposal-grid">
+                                <div class="proposal-item">
+                                    <h4>Industry Focus</h4>
+                                    <p id="prop-industry">Technology</p>
+                                </div>
+                                <div class="proposal-item">
+                                    <h4>Estimated Budget</h4>
+                                    <p id="prop-budget">$5k - $15k</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="proposal-section">
+                            <h3><i class="fas fa-check-double"></i> Selected Solutions</h3>
+                            <div class="proposal-features" id="prop-services">
+                                <!-- Tags will be injected here -->
+                                <span class="feature-tag">Web Development</span>
+                                <span class="feature-tag">AI Integration</span>
+                            </div>
+                        </div>
+
+                        <div class="proposal-section">
+                            <h3><i class="fas fa-tasks"></i> Implementation Timeline</h3>
+                            <div class="timeline-box">
+                                <p>Based on your <span id="prop-timeline">2-3 Months</span> requirement, we propose the following phases:</p>
+                                <div class="timeline-steps">
+                                    <div class="t-step">
+                                        <div class="t-icon">1</div>
+                                        <p>Discovery</p>
+                                    </div>
+                                    <div class="t-step">
+                                        <div class="t-icon">2</div>
+                                        <p>Development</p>
+                                    </div>
+                                    <div class="t-step">
+                                        <div class="t-icon">3</div>
+                                        <p>Launch</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="proposal-footer">
+                        <div class="signature-area">
+                            Authorized by Spidyweb Service Team
+                        </div>
+                        <div class="contact-footer">
+                            <p><i class="fas fa-phone-alt"></i> +91 6356647453</p>
+                            <p><i class="fas fa-envelope"></i> spidywebtech7@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="proposal-actions">
+                    <button class="btn btn-outline" onclick="window.print()" style="color: var(--primary); border-color: #ddd;">
+                        <i class="fas fa-print"></i> Print Proposal
+                    </button>
+                    <button class="btn btn-primary" id="final-whatsapp">
+                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container text-center" style="padding-bottom: 40px;">
+            <div class="footer-brand">
+                <h3>SPIDYWEB<span>SERVICE</span></h3>
+                <p>Your partner in digital transformation and AI innovation.</p>
+            </div>
+            <p>&copy; 2026 Spidyweb Service. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="demo.js"></script>
+</body>
+</html>
