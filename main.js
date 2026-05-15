@@ -89,8 +89,49 @@ document.addEventListener('DOMContentLoaded', () => {
     const navMenu = document.getElementById('nav-menu');
 
     if (mobileToggle) {
-        mobileToggle.addEventListener('click', () => {
-            navMenu.style.display = navMenu.style.display === 'block' ? 'none' : 'block';
+        mobileToggle.addEventListener('click', (e) => {
+            navMenu.classList.toggle('active');
+            const icon = mobileToggle.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+            e.stopPropagation();
+        });
+
+        // Toggle dropdowns on mobile
+        const dropdowns = document.querySelectorAll('.has-dropdown');
+        dropdowns.forEach(dropdown => {
+            const link = dropdown.querySelector('a');
+            link.addEventListener('click', (e) => {
+                if (window.innerWidth <= 768) {
+                    if (!dropdown.classList.contains('active')) {
+                        e.preventDefault();
+                        dropdown.classList.add('active');
+                    }
+                }
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (navMenu.classList.contains('active') && !navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
+                navMenu.classList.remove('active');
+                const icon = mobileToggle.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            }
+        });
+
+        // Close menu when clicking a link (if not a dropdown parent on mobile)
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                const parent = link.parentElement;
+                if (!parent.classList.contains('has-dropdown') || window.innerWidth > 768) {
+                    navMenu.classList.remove('active');
+                    const icon = mobileToggle.querySelector('i');
+                    icon.classList.add('fa-bars');
+                    icon.classList.remove('fa-times');
+                }
+            });
         });
     }
 });
